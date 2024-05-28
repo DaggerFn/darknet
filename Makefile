@@ -1,10 +1,10 @@
-GPU=0
-CUDNN=0
+GPU=1
+CUDNN=1
 CUDNN_HALF=0
-OPENCV=0
+OPENCV=1
 AVX=0
-OPENMP=0
-LIBSO=0
+OPENMP=1
+LIBSO=1
 ZED_CAMERA=0
 ZED_CAMERA_v2_8=0
 
@@ -17,7 +17,7 @@ ZED_CAMERA_v2_8=0
 USE_CPP=0
 DEBUG=0
 
-ARCH= -gencode arch=compute_50,code=[sm_50,compute_50] \
+# ARCH= -gencode arch=compute_50,code=[sm_50,compute_50] \
       -gencode arch=compute_52,code=[sm_52,compute_52] \
 	    -gencode arch=compute_61,code=[sm_61,compute_61]
 
@@ -68,7 +68,7 @@ OS := $(shell uname)
 
 # NOT TESTED, THEORETICAL
 # GeForce RTX 4070 Ti, 4080, 4090, L4, L40
-# ARCH= -gencode arch=compute_89,code=[sm_89,compute_89]
+ARCH= -gencode arch=compute_89,code=[sm_89,compute_89]
 
 # NOT TESTED, THEORETICAL
 # Nvidia H100
